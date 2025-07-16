@@ -1,0 +1,2 @@
+config CODER
+    def_bool $(shields_list_contains,coder)

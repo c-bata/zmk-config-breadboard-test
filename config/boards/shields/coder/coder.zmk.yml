@@ -1,0 +1,8 @@
+file_format: "1"
+id: coder
+name: Coder
+type: shield
+url: https://github.com/c-bata/zmk-config-coder
+requires: [seeeduino_xiao_ble]
+features:
+  - keys

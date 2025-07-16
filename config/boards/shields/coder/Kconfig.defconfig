@@ -1,0 +1,4 @@
+if CODER
+config ZMK_KEYBOARD_NAME
+    default "Coder Keyboard"
+endif
