@@ -1,15 +1,22 @@
 #include <dt-bindings/zmk/matrix_transform.h>
+#include <physical_layouts.dtsi>
 
 / {
     chosen {
         zmk,physical-layout = &physical_layout0;
     };
 
-    physical_layout0: physical_layout0 {
-        compatible = "zmk,physical_layout";
+    physical_layout0: physical_layout_0 {
+        compatible = "zmk,physical-layout";
         display-name = "Default Layout";
         kscan = <&kscan0>;
         transform = <&default_transform>;
+    keys  //                      w   h x y rot rx ry
+	    = <&key_physical_attrs 100 100   0   0   0  0  0>
+	    , <&key_physical_attrs 100 100 100   0   0  0  0>
+	    , <&key_physical_attrs 100 100   0 100   0  0  0>
+	    , <&key_physical_attrs 100 100 100 100   0  0  0>
+	    ;
     };
 
     default_transform: keymap_transform0 {
@@ -29,7 +36,7 @@
             = <&xiao_d 5 GPIO_ACTIVE_HIGH>
             , <&xiao_d 6 GPIO_ACTIVE_HIGH>
             ;
-        col-gpios
+        row-gpios
             = <&xiao_d 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             , <&xiao_d 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
