@@ -1,4 +1,8 @@
 if CODER
 config ZMK_KEYBOARD_NAME
     default "Coder Keyboard"
+config I2C
+    default y
+config GPIO_MCP230XX
+    default y
 endif
