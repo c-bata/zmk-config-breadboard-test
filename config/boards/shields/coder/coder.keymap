@@ -5,9 +5,18 @@
         compatible = "zmk,keymap";
 
         default_layer {
+            // bindings = <
+            //     &kp Q &kp W
+            //     &kp A &kp S
+            //     &kp E &kp D
+            // >;
             bindings = <
-                &kp A   &kp E
-                &kp LSHFT   &kp X
+                &kp Q
+                &kp W
+                &kp E
+                &kp A
+                &kp S
+                &kp D
             >;
         };
     };
